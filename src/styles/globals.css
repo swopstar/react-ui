@@ -1,0 +1,186 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ── Font faces ───────────────────────────────────────────── */
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 200 1000;
+  font-display: swap;
+  src: url('../assets/fonts/nunito-sans-normal.woff2') format('woff2-variations');
+}
+
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: italic;
+  font-weight: 200 1000;
+  font-display: swap;
+  src: url('../assets/fonts/nunito-sans-italic.woff2') format('woff2-variations');
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../assets/fonts/geist-mono-normal.woff2') format('woff2-variations');
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../assets/fonts/geist-mono-italic.woff2') format('woff2-variations');
+}
+
+/* ── Dark mode scoped to .dark wrapper (ThemeProvider) ────── */
+@custom-variant dark (&:is(.dark *));
+
+/* ── Tailwind v4 theme bridge ─────────────────────────────── */
+@theme inline {
+  /* Typography */
+  --font-sans: 'Nunito Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, monospace;
+
+  /* Radius scale */
+  --radius-sm:  calc(var(--radius) * 0.571);
+  --radius-md:  calc(var(--radius) * 0.714);
+  --radius-lg:  var(--radius);
+  --radius-xl:  calc(var(--radius) * 1.429);
+  --radius-2xl: calc(var(--radius) * 1.857);
+
+  /* Color bridge: CSS vars → Tailwind utilities */
+  --color-background:                   var(--background);
+  --color-foreground:                   var(--foreground);
+  --color-card:                         var(--card);
+  --color-card-foreground:              var(--card-foreground);
+  --color-popover:                      var(--popover);
+  --color-popover-foreground:           var(--popover-foreground);
+  --color-primary:                      var(--primary);
+  --color-primary-foreground:           var(--primary-foreground);
+  --color-primary-edge:                 var(--primary-edge);
+  --color-destructive:                  var(--destructive);
+  --color-destructive-foreground:       var(--destructive-foreground);
+  --color-destructive-edge:             var(--destructive-edge);
+  --color-positive:                     var(--positive);
+  --color-positive-foreground:          var(--positive-foreground);
+  --color-positive-edge:                var(--positive-edge);
+  --color-warning:                      var(--warning);
+  --color-warning-foreground:           var(--warning-foreground);
+  --color-warning-edge:                 var(--warning-edge);
+  --color-confirm:                      var(--confirm);
+  --color-confirm-foreground:           var(--confirm-foreground);
+  --color-confirm-edge:                 var(--confirm-edge);
+  --color-surface:                      var(--surface);
+  --color-edge:                         var(--edge);
+  --color-edge-active:                  var(--edge-active);
+  --color-secondary:                    var(--secondary);
+  --color-secondary-foreground:         var(--secondary-foreground);
+  --color-muted:                        var(--muted);
+  --color-muted-foreground:             var(--muted-foreground);
+  --color-accent:                       var(--accent);
+  --color-accent-foreground:            var(--accent-foreground);
+  --color-border:                       var(--border);
+  --color-input:                        var(--input);
+  --color-ring:                         var(--ring);
+  --color-sidebar:                      var(--sidebar);
+  --color-sidebar-foreground:           var(--sidebar-foreground);
+  --color-sidebar-primary:              var(--sidebar-primary);
+  --color-sidebar-primary-foreground:   var(--sidebar-primary-foreground);
+  --color-sidebar-accent:               var(--sidebar-accent);
+  --color-sidebar-accent-foreground:    var(--sidebar-accent-foreground);
+  --color-sidebar-border:               var(--sidebar-border);
+  --color-sidebar-ring:                 var(--sidebar-ring);
+  --color-chart-1:                      var(--chart-1);
+  --color-chart-2:                      var(--chart-2);
+  --color-chart-3:                      var(--chart-3);
+  --color-chart-4:                      var(--chart-4);
+  --color-chart-5:                      var(--chart-5);
+}
+
+/* ── Fallback tokens ──────────────────────────────────────── */
+/* Light mode, master brand (#607D8B). Applied before ThemeProvider hydrates. */
+:root {
+  --radius: 0.875rem;
+
+  /* Semantic palette */
+  --primary:                    oklch(0.50 0.04 220);
+  --primary-foreground:         oklch(0.99 0 0);
+  --primary-edge:               oklch(0.38 0.04 220);
+  --destructive:                oklch(0.52 0.22 25);
+  --destructive-foreground:     oklch(0.99 0 0);
+  --destructive-edge:           oklch(0.40 0.25 25);
+  --positive:                   oklch(0.46 0.18 145);
+  --positive-foreground:        oklch(0.99 0 0);
+  --positive-edge:              oklch(0.34 0.20 145);
+  --warning:                    oklch(0.80 0.19 75);
+  --warning-foreground:         oklch(0.14 0 0);
+  --warning-edge:               oklch(0.57 0.23 75);
+  --confirm:                    oklch(0.55 0.18 255);
+  --confirm-foreground:         oklch(0.99 0 0);
+  --confirm-edge:               oklch(0.41 0.20 255);
+
+  /* Tinted surfaces — master brand (#607D8B) at low chroma */
+  --surface:                    oklch(0.95 0.005 220);
+  --edge:                       oklch(0.82 0.009 220);
+  --edge-active:                oklch(0.65 0.016 220);
+
+  /* Neutral surfaces */
+  --background:                 oklch(0.99 0 0);
+  --foreground:                 oklch(0.14 0 0);
+  --card:                       oklch(0.97 0 0);
+  --card-foreground:            oklch(0.14 0 0);
+  --popover:                    oklch(0.99 0 0);
+  --popover-foreground:         oklch(0.14 0 0);
+  --secondary:                  oklch(0.94 0 0);
+  --secondary-foreground:       oklch(0.22 0 0);
+  --muted:                      oklch(0.95 0 0);
+  --muted-foreground:           oklch(0.50 0 0);
+  --accent:                     oklch(0.93 0 0);
+  --accent-foreground:          oklch(0.20 0 0);
+  --border:                     oklch(0.88 0 0);
+  --input:                      oklch(0.88 0 0);
+  --ring:                       oklch(0.52 0.04 220);
+  --sidebar:                    oklch(0.97 0 0);
+  --sidebar-foreground:         oklch(0.14 0 0);
+  --sidebar-primary:            oklch(0.52 0.04 220);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent:             oklch(0.93 0 0);
+  --sidebar-accent-foreground:  oklch(0.20 0 0);
+  --sidebar-border:             oklch(0.88 0 0);
+  --sidebar-ring:               oklch(0.52 0.04 220);
+  --chart-1:                    oklch(0.65 0.05 220);
+  --chart-2:                    oklch(0.58 0.05 260);
+  --chart-3:                    oklch(0.52 0.04 300);
+  --chart-4:                    oklch(0.72 0.05 180);
+  --chart-5:                    oklch(0.60 0.04 20);
+}
+
+/* ── Base layer ───────────────────────────────────────────── */
+@layer base {
+  * {
+    font-optical-sizing: auto;
+    font-variation-settings: 'YTLC' 540;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-variation-settings: 'YTLC' 540, 'wght' 800, 'wdth' 110;
+  }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+  h5 { font-size: 1.125rem; }
+  h6 { font-size: 1rem; }
+
+  code, kbd, pre, samp {
+    font-family: var(--font-mono);
+    font-variation-settings: normal;
+  }
+}
