@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 Rareș Nistor <raresh@nistor.email>
+
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { Slot } from "radix-ui"
@@ -5,7 +8,7 @@ import { Slot } from "radix-ui"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex shrink-0 items-center justify-center gap-2 rounded-md border text-sm font-medium whitespace-nowrap outline-none focus-visible:[outline:1px_solid_var(--ring)] focus-visible:outline-offset-0 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "inline-flex shrink-0 cursor-default items-center justify-center gap-2 rounded-md border text-sm font-medium whitespace-nowrap outline-none focus-visible:[outline:1px_solid_var(--ring)] focus-visible:outline-offset-0 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       variant: {
@@ -25,7 +28,7 @@ const buttonVariants = cva(
           "bg-confirm text-confirm-foreground border-confirm-edge hover:[outline:1px_solid_var(--confirm-edge)] hover:outline-offset-0 active:[outline:1px_solid_var(--confirm-edge)] active:outline-offset-0 active:bg-confirm-edge",
         outline: "bg-transparent border-border text-foreground hover:bg-accent hover:text-accent-foreground active:bg-accent",
         ghost: "border-transparent bg-transparent text-foreground hover:bg-accent hover:text-accent-foreground active:bg-accent",
-        link: "border-transparent text-primary underline-offset-4 hover:underline",
+        link: "cursor-pointer border-transparent text-primary underline-offset-4 hover:underline",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

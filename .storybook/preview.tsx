@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 Rareș Nistor <raresh@nistor.email>
+
 import type { Preview, Decorator } from '@storybook/react-vite'
 import React from 'react'
 import { ThemeProvider } from '../src/lib/theme/ThemeProvider'
@@ -42,13 +45,14 @@ const withTheme: Decorator = (Story, context) => {
   const brand = (context.globals.brand as BrandKey) ?? 'master'
   const colorMode = (context.globals.colorMode as 'light' | 'dark' | 'auto') ?? 'light'
   const { seedColor } = BRANDS[brand]
+  const padded = context.parameters.padded !== false
 
   return (
     <ThemeProvider
       seedColor={seedColor}
       mode={colorMode}
       className="bg-background text-foreground"
-      style={{ minHeight: '100vh', padding: '1.5rem' }}
+      style={{ minHeight: '100vh', ...(padded && { padding: '1.5rem' }) }}
     >
       <Story />
     </ThemeProvider>

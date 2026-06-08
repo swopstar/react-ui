@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 Rareș Nistor <raresh@nistor.email>
+
 import { parse, oklch, formatCss, clampChroma } from 'culori'
 import type { Oklch } from 'culori'
 import type { ThemeTokens } from './types'
@@ -79,11 +82,12 @@ function buildLightTokens(seed: Oklch, radius: number): ThemeTokens {
     'accent-foreground':          oklchStr(0.20, 0,    0),
     // Chrome
     border:                       oklchStr(0.88, 0,    0),
+    'background-elevated':        oklchStr(0.88, 0,    0),
     input:                        oklchStr(0.88, 0,    0),
     ring:                         oklchStr(primaryL, c, h),
     radius:                       `${radius}rem`,
     // Sidebar
-    sidebar:                      oklchStr(0.97, 0,    0),
+    sidebar:                      oklchStr(0.88, 0,    0),
     'sidebar-foreground':         oklchStr(0.14, 0,    0),
     'sidebar-primary':            oklchStr(primaryL, c, h),
     'sidebar-primary-foreground': oklchStr(0.99, 0,    0),
@@ -132,16 +136,17 @@ function buildDarkTokens(seed: Oklch, radius: number): ThemeTokens {
     'accent-foreground':          oklchStr(0.97, 0,    0),
     // Chrome
     border:                       'oklch(1 0 0 / 12%)',
+    'background-elevated':        oklchStr(0.22, 0,    0),
     input:                        'oklch(1 0 0 / 15%)',
     ring:                         oklchStr(primaryL, c, h),
     radius:                       `${radius}rem`,
     // Sidebar
-    sidebar:                      oklchStr(0.13, 0,    0),
+    sidebar:                      oklchStr(0.22, 0,    0),
     'sidebar-foreground':         oklchStr(0.97, 0,    0),
     'sidebar-primary':            oklchStr(primaryL, c, h),
     'sidebar-primary-foreground': oklchStr(0.99, 0,    0),
-    'sidebar-accent':             oklchStr(0.20, 0,    0),
-    'sidebar-accent-foreground':  oklchStr(0.60, 0,    0),
+    'sidebar-accent':             oklchStr(0.28, 0,    0),
+    'sidebar-accent-foreground':  oklchStr(0.80, 0,    0),
     'sidebar-border':             'oklch(1 0 0 / 12%)',
     'sidebar-ring':               oklchStr(primaryL, c, h),
     // Charts

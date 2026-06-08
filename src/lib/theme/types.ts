@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 Rareș Nistor <raresh@nistor.email>
+
 export interface ThemeTokens {
   // Surfaces — neutral, no seed chroma
   background: string
@@ -35,6 +38,7 @@ export interface ThemeTokens {
   'accent-foreground': string
   // Chrome
   border: string
+  'background-elevated': string
   input: string
   ring: string
   radius: string
