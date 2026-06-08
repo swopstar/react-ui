@@ -10,7 +10,7 @@ import {
 import { Button } from '@/components/ui/button'
 
 const meta = {
-  title: 'UI/Sheet',
+  title: 'Components/Sheet',
   component: Sheet,
   tags: ['autodocs'],
 } satisfies Meta<typeof Sheet>

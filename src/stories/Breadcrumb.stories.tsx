@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/breadcrumb'
 
 const meta = {
-  title: 'UI/Breadcrumb',
+  title: 'Navigation/Breadcrumb',
   component: Breadcrumb,
   tags: ['autodocs'],
 } satisfies Meta<typeof Breadcrumb>

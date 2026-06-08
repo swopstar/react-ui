@@ -3,7 +3,7 @@ import { Search } from 'lucide-react'
 import { InputGroup, InputGroupAddon, InputGroupInput, InputGroupText } from '@/components/ui/input-group'
 
 const meta = {
-  title: 'UI/InputGroup',
+  title: 'Forms/InputGroup',
   component: InputGroup,
   tags: ['autodocs'],
 } satisfies Meta<typeof InputGroup>

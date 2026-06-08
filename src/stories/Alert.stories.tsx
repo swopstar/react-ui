@@ -3,7 +3,7 @@ import { Terminal } from 'lucide-react'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 
 const meta = {
-  title: 'UI/Alert',
+  title: 'Components/Alert',
   component: Alert,
   tags: ['autodocs'],
 } satisfies Meta<typeof Alert>

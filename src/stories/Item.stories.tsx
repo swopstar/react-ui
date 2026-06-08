@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Item, ItemContent, ItemDescription, ItemGroup, ItemSeparator, ItemTitle } from '@/components/ui/item'
 
 const meta = {
-  title: 'UI/Item',
+  title: 'Components/Item',
   component: Item,
   tags: ['autodocs'],
 } satisfies Meta<typeof Item>

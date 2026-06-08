@@ -29,7 +29,7 @@ import {
 } from '@/components/ui/sidebar'
 
 const meta = {
-  title: 'UI/Sidebar',
+  title: 'Navigation/Sidebar',
   component: Sidebar,
   tags: ['autodocs'],
   parameters: { layout: 'fullscreen', padded: false },

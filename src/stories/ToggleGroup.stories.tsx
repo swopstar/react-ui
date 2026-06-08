@@ -3,7 +3,7 @@ import { AlignCenter, AlignLeft, AlignRight } from 'lucide-react'
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 
 const meta = {
-  title: 'UI/ToggleGroup',
+  title: 'Forms/ToggleGroup',
   component: ToggleGroup,
   tags: ['autodocs'],
 } satisfies Meta<typeof ToggleGroup>

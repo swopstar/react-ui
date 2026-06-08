@@ -4,7 +4,7 @@ import { PageHeader } from '@/components/ui/page-header'
 import { Button } from '@/components/ui/button'
 
 const meta = {
-  title: 'UI/PageHeader',
+  title: 'Navigation/PageHeader',
   component: PageHeader,
   tags: ['autodocs'],
 } satisfies Meta<typeof PageHeader>

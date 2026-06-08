@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Avatar, AvatarFallback, AvatarImage, AvatarGroup, AvatarGroupCount } from '@/components/ui/avatar'
 
 const meta = {
-  title: 'UI/Avatar',
+  title: 'Primitives/Avatar',
   component: Avatar,
   tags: ['autodocs'],
 } satisfies Meta<typeof Avatar>

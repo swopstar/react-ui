@@ -5,7 +5,7 @@ import {
 } from '@/components/ui/typography'
 
 const meta = {
-  title: 'UI/Typography',
+  title: 'Primitives/Typography',
   component: BodyText,
   tags: ['autodocs'],
 } satisfies Meta<typeof BodyText>

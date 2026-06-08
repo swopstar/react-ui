@@ -3,7 +3,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Label } from '@/components/ui/label'
 
 const meta = {
-  title: 'UI/Select',
+  title: 'Forms/Select',
   component: Select,
   tags: ['autodocs'],
 } satisfies Meta<typeof Select>

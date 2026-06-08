@@ -3,7 +3,7 @@ import * as React from 'react'
 import { DatePicker } from '@/components/ui/date-picker'
 
 const meta = {
-  title: 'UI/DatePicker',
+  title: 'Forms/DatePicker',
   component: DatePicker,
   tags: ['autodocs'],
 } satisfies Meta<typeof DatePicker>

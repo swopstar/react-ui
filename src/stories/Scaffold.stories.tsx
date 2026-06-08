@@ -32,7 +32,7 @@ import {
 } from '@/components/ui/sidebar'
 
 const meta = {
-  title: 'UI/Scaffold',
+  title: 'Shell/Scaffold',
   component: Scaffold,
   tags: ['autodocs'],
   parameters: { layout: 'fullscreen', padded: false },

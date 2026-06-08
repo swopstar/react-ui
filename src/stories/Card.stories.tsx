@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/components/ui/button'
 
 const meta = {
-  title: 'UI/Card',
+  title: 'Components/Card',
   component: Card,
   tags: ['autodocs'],
 } satisfies Meta<typeof Card>
