@@ -35,7 +35,7 @@ const meta = {
   title: 'Shell/Scaffold',
   component: Scaffold,
   tags: ['autodocs'],
-  parameters: { layout: 'fullscreen', padded: false },
+  parameters: { layout: 'fullscreen', padded: false, fullHeight: true },
 } satisfies Meta<typeof Scaffold>
 
 export default meta

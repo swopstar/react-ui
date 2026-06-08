@@ -86,7 +86,7 @@ export {
   TabsTrigger,
   tabsListVariants,
 } from '@/components/ui/tabs'
-export { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'
+export { Alert, AlertTitle, AlertDescription, AlertAction } from '@/components/ui/alert'
 export {
   AlertDialog,
   AlertDialogAction,

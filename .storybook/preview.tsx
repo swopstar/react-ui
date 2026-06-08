@@ -46,13 +46,14 @@ const withTheme: Decorator = (Story, context) => {
   const colorMode = (context.globals.colorMode as 'light' | 'dark' | 'auto') ?? 'light'
   const { seedColor } = BRANDS[brand]
   const padded = context.parameters.padded !== false
+  const fullHeight = context.parameters.fullHeight === true
 
   return (
     <ThemeProvider
       seedColor={seedColor}
       mode={colorMode}
       className="bg-background text-foreground"
-      style={{ minHeight: '100vh', ...(padded && { padding: '1.5rem' }) }}
+      style={{ ...(fullHeight && { minHeight: '100vh' }), ...(padded && { padding: '1.5rem' }) }}
     >
       <Story />
     </ThemeProvider>
@@ -63,6 +64,7 @@ export const decorators: Decorator[] = [withTheme]
 
 const preview: Preview = {
   parameters: {
+    backgrounds: { disable: true },
     controls: {
       matchers: {
         color: /(background|color|fill|stroke)$/i,
