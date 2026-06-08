@@ -50,7 +50,19 @@ export function ThemeProvider({
   }, [mode])
 
   const activeTokens = isDark ? dark : light
-  const cssVars = tokensToVars(activeTokens)
+  const cssVars = useMemo(() => tokensToVars(activeTokens), [activeTokens])
+
+  // Mirror vars + dark class onto <html> so Radix portals (rendered outside the
+  // wrapper div) inherit the correct tokens and colour scheme.
+  useEffect(() => {
+    const el = document.documentElement
+    Object.entries(cssVars).forEach(([key, value]) => el.style.setProperty(key, value))
+    el.classList.toggle('dark', isDark)
+    return () => {
+      Object.keys(cssVars).forEach(key => el.style.removeProperty(key))
+      el.classList.remove('dark')
+    }
+  }, [cssVars, isDark])
 
   const resolved = useMemo<ResolvedTheme>(
     () => ({ light, dark, activeTokens, seedColor, isDark }),

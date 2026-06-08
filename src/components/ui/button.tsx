@@ -23,6 +23,8 @@ const buttonVariants = cva(
           "bg-warning text-warning-foreground border-warning-edge hover:[outline:1px_solid_var(--warning-edge)] hover:outline-offset-0 active:[outline:1px_solid_var(--warning-edge)] active:outline-offset-0 active:bg-warning-edge",
         confirm:
           "bg-confirm text-confirm-foreground border-confirm-edge hover:[outline:1px_solid_var(--confirm-edge)] hover:outline-offset-0 active:[outline:1px_solid_var(--confirm-edge)] active:outline-offset-0 active:bg-confirm-edge",
+        outline: "bg-transparent border-border text-foreground hover:bg-accent hover:text-accent-foreground active:bg-accent",
+        ghost: "border-transparent bg-transparent text-foreground hover:bg-accent hover:text-accent-foreground active:bg-accent",
         link: "border-transparent text-primary underline-offset-4 hover:underline",
       },
       size: {

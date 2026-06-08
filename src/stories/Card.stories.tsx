@@ -22,8 +22,8 @@ export const Default: Story = {
         <p className="text-sm text-muted-foreground">Card content area.</p>
       </CardContent>
       <CardFooter>
-        <Button variant="outline" size="sm">Cancel</Button>
-        <Button size="sm" className="ml-2">Save</Button>
+        <Button size="sm">Cancel</Button>
+        <Button size="sm" variant="primary" className="ml-2">Save</Button>
       </CardFooter>
     </Card>
   ),

@@ -35,8 +35,8 @@ export const Large: Story = { args: { children: 'Large', size: 'lg' } }
 export const AllVariants: Story = {
   render: () => (
     <div className="flex flex-wrap gap-3">
-      {(['default', 'primary', 'destructive', 'positive', 'warning', 'confirm', 'link'] as const).map(
-        (variant) => <Button key={variant} variant={variant}>{variant}</Button>
+      {(['Default', 'Primary', 'Destructive', 'Positive', 'Warning', 'Confirm', 'Link'] as const).map(
+        (variant) => <Button key={variant} variant={variant.toLowerCase() as any}>{variant}</Button>
       )}
     </div>
   ),
