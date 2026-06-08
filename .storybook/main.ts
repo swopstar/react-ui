@@ -15,6 +15,14 @@ const config: StorybookConfig = {
     options: {},
   },
   docs: {},
+  viteFinal: async (config) => {
+    // vite-plugin-dts is for library builds only — strip it from Storybook's build
+    // to avoid api-extractor failures in CI
+    config.plugins = (config.plugins ?? []).filter(
+      (p) => !p || Array.isArray(p) || (p as Record<string, unknown>)['name'] !== 'vite:dts'
+    )
+    return config
+  },
 }
 
 export default config
