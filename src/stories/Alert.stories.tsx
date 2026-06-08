@@ -1,12 +1,28 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { AlertCircle, CheckCircle, Hourglass, Info, OctagonAlert } from 'lucide-react'
+import type { ComponentProps } from 'react'
 import { Alert, AlertAction, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
 
-const meta = {
+type AlertStoryArgs = ComponentProps<typeof Alert> & { showAction?: boolean }
+
+const meta: Meta<AlertStoryArgs> = {
   title: 'Components/Alert',
   component: Alert,
   tags: ['autodocs'],
+  argTypes: {
+    variant: {
+      control: 'select',
+      options: ['default', 'destructive', 'positive', 'warning', 'confirm'],
+      description: 'The visual style of the alert',
+    },
+    showAction: {
+      control: 'boolean',
+      description: 'Show an optional action button',
+      table: { category: 'Story controls' },
+    },
+  },
+  args: { showAction: false },
   parameters: {
     docs: {
       description: {
@@ -17,10 +33,10 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Alert>
+}
 
 export default meta
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<AlertStoryArgs>
 
 export const Default: Story = {
   parameters: {
@@ -30,12 +46,12 @@ export const Default: Story = {
       },
     },
   },
-  render: () => (
-    <Alert>
+  render: ({ variant, showAction }: AlertStoryArgs) => (
+    <Alert variant={variant}>
       <Hourglass />
       <AlertTitle>Library scan in progress</AlertTitle>
       <AlertDescription>Your library is being scanned for new files. This may take a few minutes.</AlertDescription>
-      <AlertAction><Button size="xs">Cancel</Button></AlertAction>
+      {showAction && <AlertAction><Button size="xs">Cancel</Button></AlertAction>}
     </Alert>
   ),
 }
@@ -48,11 +64,12 @@ export const Destructive: Story = {
       },
     },
   },
-  render: () => (
-    <Alert variant="destructive">
+  render: ({ variant, showAction }: AlertStoryArgs) => (
+    <Alert variant={variant ?? 'destructive'}>
       <OctagonAlert />
       <AlertTitle>Error</AlertTitle>
       <AlertDescription>Failed to connect to the media server. Check your network settings and try again.</AlertDescription>
+      {showAction && <AlertAction><Button size="xs">Retry</Button></AlertAction>}
     </Alert>
   ),
 }
@@ -65,11 +82,12 @@ export const Positive: Story = {
       },
     },
   },
-  render: () => (
-    <Alert variant="positive">
+  render: ({ variant, showAction }: AlertStoryArgs) => (
+    <Alert variant={variant ?? 'positive'}>
       <CheckCircle />
       <AlertTitle>Success</AlertTitle>
       <AlertDescription>Import complete. 47 albums were added to your library.</AlertDescription>
+      {showAction && <AlertAction><Button size="xs">View library</Button></AlertAction>}
     </Alert>
   ),
 }
@@ -82,11 +100,12 @@ export const Warning: Story = {
       },
     },
   },
-  render: () => (
-    <Alert variant="warning">
+  render: ({ variant, showAction }: AlertStoryArgs) => (
+    <Alert variant={variant ?? 'warning'}>
       <AlertCircle />
       <AlertTitle>Warning</AlertTitle>
       <AlertDescription>12 tracks have missing metadata. Run a library scan to resolve them.</AlertDescription>
+      {showAction && <AlertAction><Button size="xs">Run scan</Button></AlertAction>}
     </Alert>
   ),
 }
@@ -99,11 +118,12 @@ export const Confirm: Story = {
       },
     },
   },
-  render: () => (
-    <Alert variant="confirm">
+  render: ({ variant, showAction }: AlertStoryArgs) => (
+    <Alert variant={variant ?? 'confirm'}>
       <Info />
       <AlertTitle>Action required</AlertTitle>
       <AlertDescription>A server update is available. Restart the application to apply it.</AlertDescription>
+      {showAction && <AlertAction><Button size="xs">Update now</Button></AlertAction>}
     </Alert>
   ),
 }
