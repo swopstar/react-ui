@@ -255,3 +255,6 @@ export {
   BodyText, BoldText, ItalicText, BoldItalicText, LabelText, MonoText,
 } from '@/components/ui/typography'
 export { useIsMobile } from '@/hooks/use-mobile'
+export { Scaffold } from '@/components/ui/scaffold'
+export { PageHeader } from '@/components/ui/page-header'
+export type { PageHeaderProps } from '@/components/ui/page-header'

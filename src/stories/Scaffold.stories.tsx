@@ -11,13 +11,12 @@ import {
   Music2,
   Plus,
   Search,
-  Share2,
   Smartphone,
   User,
 } from 'lucide-react'
 import { Scaffold } from '@/components/ui/scaffold'
+import { PageHeader } from '@/components/ui/page-header'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
-import { Button } from '@/components/ui/button'
 import {
   Sidebar,
   SidebarContent,
@@ -165,20 +164,6 @@ function MediaCard({ image, placeholder = 'album', title, subtitle }: MediaCardP
       <div className="min-w-0 px-0.5">
         <p className="truncate text-sm font-semibold">{title}</p>
         <p className="truncate text-xs text-muted-foreground">{subtitle}</p>
-      </div>
-    </div>
-  )
-}
-
-// ── Page header ────────────────────────────────────────────────────────────
-
-function PageHeader({ title }: { title: string }) {
-  return (
-    <div className="flex w-full items-center justify-between">
-      <span className="font-semibold">{title}</span>
-      <div className="flex items-center gap-1">
-        <Button size="icon"><Search /></Button>
-        <Button size="icon"><Share2 /></Button>
       </div>
     </div>
   )
