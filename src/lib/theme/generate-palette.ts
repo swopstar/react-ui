@@ -82,12 +82,12 @@ function buildLightTokens(seed: Oklch, radius: number): ThemeTokens {
     'accent-foreground':          oklchStr(0.20, 0,    0),
     // Chrome
     border:                       oklchStr(0.88, 0,    0),
-    'background-elevated':        oklchStr(0.88, 0,    0),
+    'background-elevated':        oklchStr(0.94, 0,    0),
     input:                        oklchStr(0.88, 0,    0),
     ring:                         oklchStr(primaryL, c, h),
     radius:                       `${radius}rem`,
     // Sidebar
-    sidebar:                      oklchStr(0.88, 0,    0),
+    sidebar:                      oklchStr(0.94, 0,    0),
     'sidebar-foreground':         oklchStr(0.14, 0,    0),
     'sidebar-primary':            oklchStr(primaryL, c, h),
     'sidebar-primary-foreground': oklchStr(0.99, 0,    0),
