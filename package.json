@@ -1,6 +1,6 @@
 {
   "name": "@swopstar/react-ui",
-  "version": "0.1.0",
+  "version": "0.2606.1",
   "description": "Shared React component library for swop* projects",
   "type": "module",
   "main": "./dist/index.cjs",
