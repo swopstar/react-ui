@@ -23,8 +23,8 @@
     "**/*.css"
   ],
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "access": "restricted"
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   },
   "scripts": {
     "dev": "storybook dev -p 6006",

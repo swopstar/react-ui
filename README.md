@@ -9,12 +9,6 @@ Shared React component library for swop\* projects. Built on [shadcn/ui](https:/
 npm install @swopstar/react-ui
 ```
 
-Requires a `.npmrc` pointing the `@swopstar` scope at GitHub Packages:
-
-```
-@swopstar:registry=https://npm.pkg.github.com
-```
-
 ## Usage
 
 Import the stylesheet once at your app root, then wrap with `ThemeProvider`:
