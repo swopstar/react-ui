@@ -53,7 +53,7 @@
   },
   "devDependencies": {
     "@fontsource-variable/geist-mono": "^5.2.8",
-    "@fontsource-variable/nunito-sans": "^5.2.5",
+    "@fontsource-variable/nunito-sans": "^5.2.7",
     "@storybook/addon-a11y": "^8.6.12",
     "@storybook/addon-docs": "^8.6.12",
     "@storybook/addon-essentials": "^8.6.12",

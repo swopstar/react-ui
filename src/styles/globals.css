@@ -5,39 +5,10 @@ SPDX-FileCopyrightText: 2026 Rareș Nistor <raresh@nistor.email>
 
 @import "tailwindcss";
 @import "tw-animate-css";
-
-/* ── Font faces ───────────────────────────────────────────── */
-@font-face {
-  font-family: 'Nunito Sans';
-  font-style: normal;
-  font-weight: 200 1000;
-  font-display: swap;
-  src: url('../assets/fonts/nunito-sans-normal.woff2') format('woff2-variations');
-}
-
-@font-face {
-  font-family: 'Nunito Sans';
-  font-style: italic;
-  font-weight: 200 1000;
-  font-display: swap;
-  src: url('../assets/fonts/nunito-sans-italic.woff2') format('woff2-variations');
-}
-
-@font-face {
-  font-family: 'Geist Mono';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url('../assets/fonts/geist-mono-normal.woff2') format('woff2-variations');
-}
-
-@font-face {
-  font-family: 'Geist Mono';
-  font-style: italic;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url('../assets/fonts/geist-mono-italic.woff2') format('woff2-variations');
-}
+@import "@fontsource-variable/nunito-sans/full.css";
+@import "@fontsource-variable/nunito-sans/full-italic.css";
+@import "@fontsource-variable/geist-mono/wght.css";
+@import "@fontsource-variable/geist-mono/wght-italic.css";
 
 /* ── Dark mode scoped to .dark wrapper (ThemeProvider) ────── */
 @custom-variant dark (&:is(.dark *));
@@ -45,8 +16,8 @@ SPDX-FileCopyrightText: 2026 Rareș Nistor <raresh@nistor.email>
 /* ── Tailwind v4 theme bridge ─────────────────────────────── */
 @theme inline {
   /* Typography */
-  --font-sans: 'Nunito Sans', ui-sans-serif, system-ui, sans-serif;
-  --font-mono: 'Geist Mono', ui-monospace, monospace;
+  --font-sans: 'Nunito Sans Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono Variable', ui-monospace, monospace;
 
   /* Radius scale */
   --radius-sm:  calc(var(--radius) * 0.571);
