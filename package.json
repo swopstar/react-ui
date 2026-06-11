@@ -1,6 +1,6 @@
 {
   "name": "@swopstar/react-ui",
-  "version": "0.2606.1",
+  "version": "0.2606.2",
   "description": "Shared React component library for swop* projects",
   "license": "MIT",
   "type": "module",
