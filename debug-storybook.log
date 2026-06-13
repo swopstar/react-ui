@@ -1,0 +1,180 @@
+[02:34:28.188] [INFO] Running automigrations
+[02:34:28.190] [DEBUG] Extracting storybook data...
+[02:34:28.190] [DEBUG] Getting Storybook info...
+[02:34:28.197] [DEBUG] Loading main config...
+[02:34:28.197] [DEBUG] Getting stories paths...
+[02:34:28.211] [DEBUG] Getting package manager...
+[02:34:28.288] [DEBUG] Getting package.json info for /home/razz/src/swopstar/react-ui/package.json...
+[02:34:28.288] [DEBUG] Getting Storybook version...
+[02:34:28.288] [DEBUG] Detecting CSF factory usage...
+[02:34:28.323] [INFO] Checking possible migrations..
+[02:34:28.323] [DEBUG] Running eslintPlugin migration checks
+[02:34:28.324] [DEBUG] Using cached package.json for /home/razz/src/swopstar/react-ui/package.json...
+[02:34:28.324] [DEBUG] End of eslintPlugin migration checks
+[02:34:28.324] [DEBUG] Running addon-mdx-gfm-remove migration checks
+[02:34:28.324] [DEBUG] Using cached package.json for /home/razz/src/swopstar/react-ui/package.json...
+[02:34:28.324] [DEBUG] End of addon-mdx-gfm-remove migration checks
+[02:34:28.324] [DEBUG] Running addon-storysource-code-panel migration checks
+[02:34:28.324] [DEBUG] End of addon-storysource-code-panel migration checks
+[02:34:28.324] [DEBUG] Running initial-globals migration checks
+[02:34:28.330] [DEBUG] End of initial-globals migration checks
+[02:34:28.330] [DEBUG] Running addon-globals-api migration checks
+[02:34:28.334] [DEBUG] End of addon-globals-api migration checks
+[02:34:28.334] [INFO] 🔎 found a 'addon-globals-api' migration:
+[02:34:28.336] [INFO] You're using a deprecated config API for viewport/backgrounds. The globals API will be used instead.
+[02:34:28.458] [INFO] ✅ ran addon-globals-api migration
+[02:34:28.458] [INFO] Ran addon-globals-api migration
+[02:34:28.458] [DEBUG] Running addon-a11y-addon-test migration checks
+[02:34:28.458] [DEBUG] End of addon-a11y-addon-test migration checks
+[02:34:28.458] [DEBUG] Running consolidated-imports migration checks
+[02:34:28.458] [DEBUG] End of consolidated-imports migration checks
+[02:34:28.458] [DEBUG] Running addon-experimental-test migration checks
+[02:34:28.459] [DEBUG] Getting installed version for @storybook/experimental-addon-test...
+[02:34:28.460] [DEBUG] Executing command: npm ls --json --depth=99 2>/dev/null
+[02:34:29.097] [DEBUG] Executing command: npm ls --json --depth=0 2>/dev/null
+[02:34:29.582] [DEBUG] Error finding installations for @storybook/experimental-addon-test: ExecaError: Command failed with exit code 1: npm ls --json '--depth=0' '2>/dev/null'
+
+{
+  "version": "0.2606.3",
+  "name": "@swopstar/react-ui"
+}
+[02:34:29.582] [DEBUG] No installations found for @storybook/experimental-addon-test
+[02:34:29.582] [DEBUG] End of addon-experimental-test migration checks
+[02:34:29.582] [DEBUG] Running rnstorybook-config migration checks
+[02:34:29.582] [DEBUG] Using cached package.json for /home/razz/src/swopstar/react-ui/package.json...
+[02:34:29.582] [DEBUG] End of rnstorybook-config migration checks
+[02:34:29.582] [DEBUG] Running rn-ondevice-addons-to-device-addons migration checks
+[02:34:29.582] [DEBUG] Using cached package.json for /home/razz/src/swopstar/react-ui/package.json...
+[02:34:29.582] [DEBUG] End of rn-ondevice-addons-to-device-addons migration checks
+[02:34:29.582] [DEBUG] Running migrate-addon-console migration checks
+[02:34:29.582] [DEBUG] Using cached package.json for /home/razz/src/swopstar/react-ui/package.json...
+[02:34:29.582] [DEBUG] End of migrate-addon-console migration checks
+[02:34:29.582] [DEBUG] Running nextjs-to-nextjs-vite migration checks
+[02:34:29.582] [DEBUG] Using cached package.json for /home/razz/src/swopstar/react-ui/package.json...
+[02:34:29.582] [DEBUG] End of nextjs-to-nextjs-vite migration checks
+[02:34:29.582] [DEBUG] Running react-vite-to-tanstack-react migration checks
+[02:34:29.582] [DEBUG] Using cached package.json for /home/razz/src/swopstar/react-ui/package.json...
+[02:34:29.582] [DEBUG] End of react-vite-to-tanstack-react migration checks
+[02:34:29.582] [DEBUG] Running remove-addon-interactions migration checks
+[02:34:29.582] [DEBUG] Using cached package.json for /home/razz/src/swopstar/react-ui/package.json...
+[02:34:29.582] [DEBUG] End of remove-addon-interactions migration checks
+[02:34:29.582] [DEBUG] Running renderer-to-framework migration checks
+[02:34:29.582] [DEBUG] End of renderer-to-framework migration checks
+[02:34:29.582] [DEBUG] Running remove-essential-addons migration checks
+[02:34:29.583] [DEBUG] Using cached package.json for /home/razz/src/swopstar/react-ui/package.json...
+[02:34:29.583] [DEBUG] End of remove-essential-addons migration checks
+[02:34:29.583] [INFO] 🔎 found a 'remove-essential-addons' migration:
+[02:34:29.583] [INFO] In Storybook 9.0, several addons have been moved into Storybook's core and are no longer needed as separate packages. We'll remove the unnecessary addons from your configuration and dependencies, and update your code to use the new core features.
+[02:34:29.585] [DEBUG] Uninstalling @storybook/addon-essentials
+[02:34:29.585] [DEBUG] Using cached package.json for /home/razz/src/swopstar/react-ui/package.json...
+[02:34:29.585] [DEBUG] Using cached package.json for /home/razz/src/swopstar/react-ui/package.json...
+[02:34:29.585] [DEBUG] Removing '@storybook/addon-essentials' from main.js addons field.
+[02:34:29.591] [DEBUG] Getting Storybook info...
+[02:34:29.592] [DEBUG] Loading main config...
+[02:34:29.592] [DEBUG] Getting stories paths...
+[02:34:29.593] [DEBUG] Getting package manager...
+[02:34:29.594] [DEBUG] Getting package.json info for /home/razz/src/swopstar/react-ui/package.json...
+[02:34:29.594] [DEBUG] Getting Storybook version...
+[02:34:29.594] [DEBUG] Detecting CSF factory usage...
+[02:34:29.598] [INFO] Verifying @storybook/addon-docs
+[02:34:29.598] [DEBUG] Getting dependency version for storybook...
+[02:34:29.598] [DEBUG] Using cached package.json for /home/razz/src/swopstar/react-ui/package.json...
+[02:34:29.598] [INFO] Installing @storybook/addon-docs@^10.4.4
+[02:34:29.598] [DEBUG] Using cached package.json for /home/razz/src/swopstar/react-ui/package.json...
+[02:34:29.599] [DEBUG] Getting CLI versions from NPM for @storybook/addon-docs...
+[02:34:29.599] [DEBUG] Executing command: npm info @storybook/addon-docs version
+[02:34:30.277] [DEBUG] Using cached package.json for /home/razz/src/swopstar/react-ui/package.json...
+[02:34:30.277] [INFO] ✅ ran remove-essential-addons migration
+[02:34:30.277] [INFO] Ran remove-essential-addons migration
+[02:34:30.277] [DEBUG] Running addon-a11y-parameters migration checks
+[02:34:30.288] [DEBUG] End of addon-a11y-parameters migration checks
+[02:34:30.288] [DEBUG] Running remove-docs-autodocs migration checks
+[02:34:30.289] [DEBUG] End of remove-docs-autodocs migration checks
+[02:34:30.289] [DEBUG] Running wrap-getAbsolutePath migration checks
+[02:34:30.291] [DEBUG] End of wrap-getAbsolutePath migration checks
+[02:34:30.291] [DEBUG] Running fix-faux-esm-require migration checks
+[02:34:30.291] [DEBUG] End of fix-faux-esm-require migration checks
+[02:34:30.291] [DEBUG] Running storybookPackageNameConflict migration checks
+[02:34:30.291] [DEBUG] Using cached package.json for /home/razz/src/swopstar/react-ui/package.json...
+[02:34:30.291] [DEBUG] End of storybookPackageNameConflict migration checks
+[02:34:30.292] [INFO] Migration check ran successfully
+[02:34:30.292] [INFO] Successful migrations:
+
+addon-globals-api, remove-essential-addons
+
+─────────────────────────────────────────────────
+
+If you'd like to run the migrations again, you can do so by running 
+npx storybook automigrate
+
+The automigrations try to migrate common patterns in your project, but might not contain everything needed to migrate to the latest version of Storybook.
+
+Please check the changelog and migration guide for manual migrations and more information: 
+https://storybook.js.org/docs/releases/migration-guide?ref=upgrade
+And reach out on Discord if you need help: https://discord.gg/storybook
+[02:34:30.294] [INFO] Installing dependencies...
+[02:34:30.294] [INFO] Installing dependencies...
+[02:34:30.294] [DEBUG] Executing command: npm install
+[02:34:34.092] [ERROR] Installation of dependencies failed! {"error":"ExecaError: Command failed with exit code 1: npm install\n\nnpm error code ERESOLVE\nnpm error ERESOLVE could not resolve\nnpm error\nnpm error While resolving: @swopstar/react-ui@0.2606.3\nnpm error Found: @storybook/addon-a11y@8.6.18\nnpm error node_modules/@storybook/addon-a11y\nnpm error   dev @storybook/addon-a11y@\"^10.4.4\" from the root project\nnpm error\nnpm error Could not resolve dependency:\nnpm error dev @storybook/addon-a11y@\"^10.4.4\" from the root project\nnpm error\nnpm error Conflicting peer dependency: storybook@10.4.4\nnpm error node_modules/storybook\nnpm error   peer storybook@\"^10.4.4\" from @storybook/addon-a11y@10.4.4\nnpm error   node_modules/@storybook/addon-a11y\nnpm error     dev @storybook/addon-a11y@\"^10.4.4\" from the root project\nnpm error\nnpm error Fix the upstream dependency conflict, or retry this command with --force or --legacy-peer-deps to accept an incorrect (and potentially broken) dependency resolution.\nnpm error\nnpm error\nnpm error For a full report see:\nnpm error /home/razz/.npm/_logs/2026-06-13T14_34_30_339Z-eresolve-report.txt\nnpm error A complete log of this run can be found in: /home/razz/.npm/_logs/2026-06-13T14_34_30_339Z-debug-0.log\n    at getFinalError (file:///home/razz/.npm/_npx/43f535109fdedec3/node_modules/storybook/dist/_node-chunks/chunk-3FBJJ3J7.js:11550:10)\n    at makeError (file:///home/razz/.npm/_npx/43f535109fdedec3/node_modules/storybook/dist/_node-chunks/chunk-3FBJJ3J7.js:13086:15)\n    at getAsyncResult (file:///home/razz/.npm/_npx/43f535109fdedec3/node_modules/storybook/dist/_node-chunks/chunk-3FBJJ3J7.js:15732:158)\n    at handlePromise (file:///home/razz/.npm/_npx/43f535109fdedec3/node_modules/storybook/dist/_node-chunks/chunk-3FBJJ3J7.js:15718:162)\n    at async Object.executeTaskWithSpinner (file:///home/razz/.npm/_npx/43f535109fdedec3/node_modules/storybook/dist/_node-chunks/chunk-3X73JSWN.js:3683:11)\n    at async NPMProxy.installDependencies (file:///home/razz/.npm/_npx/43f535109fdedec3/node_modules/storybook/dist/_node-chunks/chunk-3FBJJ3J7.js:9700:5)\n    at async NPMProxy.installDependencies (file:///home/razz/.npm/_npx/43f535109fdedec3/node_modules/storybook/dist/_node-chunks/chunk-3FBJJ3J7.js:16457:7)\n    at async doAutomigrate (file:///home/razz/.npm/_npx/43f535109fdedec3/node_modules/@storybook/cli/dist/_node-chunks/run-BMVOW3UH.js:8223:32)\n    at async file:///home/razz/.npm/_npx/43f535109fdedec3/node_modules/@storybook/cli/dist/_node-chunks/run-BMVOW3UH.js:10614:90\n    at async withTelemetry (file:///home/razz/.npm/_npx/43f535109fdedec3/node_modules/storybook/dist/_node-chunks/chunk-TQLYOGGH.js:655:12)"}
+[02:34:34.092] [ERROR] Installation of dependencies failed!
+[02:34:34.092] [ERROR] [38;2;241;97;97mExecaError: Command failed with exit code 1: npm install
+
+npm error code ERESOLVE
+npm error ERESOLVE could not resolve
+npm error
+npm error While resolving: @swopstar/react-ui@0.2606.3
+npm error Found: @storybook/addon-a11y@8.6.18
+npm error node_modules/@storybook/addon-a11y
+npm error   dev @storybook/addon-a11y@"^10.4.4" from the root project
+npm error
+npm error Could not resolve dependency:
+npm error dev @storybook/addon-a11y@"^10.4.4" from the root project
+npm error
+npm error Conflicting peer dependency: storybook@10.4.4
+npm error node_modules/storybook
+npm error   peer storybook@"^10.4.4" from @storybook/addon-a11y@10.4.4
+npm error   node_modules/@storybook/addon-a11y
+npm error     dev @storybook/addon-a11y@"^10.4.4" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry this command with --force or --legacy-peer-deps to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error /home/razz/.npm/_logs/2026-06-13T14_34_30_339Z-eresolve-report.txt
+npm error A complete log of this run can be found in: /home/razz/.npm/_logs/2026-06-13T14_34_30_339Z-debug-0.log[39m
+    at getFinalError (file:///home/razz/.npm/_npx/43f535109fdedec3/node_modules/storybook/dist/_node-chunks/chunk-3FBJJ3J7.js:11550:10)
+    at makeError (file:///home/razz/.npm/_npx/43f535109fdedec3/node_modules/storybook/dist/_node-chunks/chunk-3FBJJ3J7.js:13086:15)
+    at getAsyncResult (file:///home/razz/.npm/_npx/43f535109fdedec3/node_modules/storybook/dist/_node-chunks/chunk-3FBJJ3J7.js:15732:158)
+    at handlePromise (file:///home/razz/.npm/_npx/43f535109fdedec3/node_modules/storybook/dist/_node-chunks/chunk-3FBJJ3J7.js:15718:162)
+    at async Object.executeTaskWithSpinner (file:///home/razz/.npm/_npx/43f535109fdedec3/node_modules/storybook/dist/_node-chunks/chunk-3X73JSWN.js:3683:11)
+    at async NPMProxy.installDependencies (file:///home/razz/.npm/_npx/43f535109fdedec3/node_modules/storybook/dist/_node-chunks/chunk-3FBJJ3J7.js:9700:5)
+    at async NPMProxy.installDependencies (file:///home/razz/.npm/_npx/43f535109fdedec3/node_modules/storybook/dist/_node-chunks/chunk-3FBJJ3J7.js:16457:7)
+    at async doAutomigrate (file:///home/razz/.npm/_npx/43f535109fdedec3/node_modules/@storybook/cli/dist/_node-chunks/run-BMVOW3UH.js:8223:32)
+    at async file:///home/razz/.npm/_npx/43f535109fdedec3/node_modules/@storybook/cli/dist/_node-chunks/run-BMVOW3UH.js:10614:90
+    at async withTelemetry (file:///home/razz/.npm/_npx/43f535109fdedec3/node_modules/storybook/dist/_node-chunks/chunk-TQLYOGGH.js:655:12)
+[02:34:34.096] [INFO] Storybook collects completely anonymous usage telemetry. We use it to shape Storybook's roadmap and prioritize features. You can learn more, including how to opt out, at https://storybook.js.org/telemetry
+[02:34:34.602] [ERROR] ExecaError: Command failed with exit code 1: npm install
+
+npm error code ERESOLVE
+npm error ERESOLVE could not resolve
+npm error
+npm error While resolving: @swopstar/react-ui@0.2606.3
+npm error Found: @storybook/addon-a11y@8.6.18
+npm error node_modules/@storybook/addon-a11y
+npm error   dev @storybook/addon-a11y@"^10.4.4" from the root project
+npm error
+npm error Could not resolve dependency:
+npm error dev @storybook/addon-a11y@"^10.4.4" from the root project
+npm error
+npm error Conflicting peer dependency: storybook@10.4.4
+npm error node_modules/storybook
+npm error   peer storybook@"^10.4.4" from @storybook/addon-a11y@10.4.4
+npm error   node_modules/@storybook/addon-a11y
+npm error     dev @storybook/addon-a11y@"^10.4.4" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry this command with --force or --legacy-peer-deps to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error /home/razz/.npm/_logs/2026-06-13T14_34_30_339Z-eresolve-report.txt
+npm error A complete log of this run can be found in: /home/razz/.npm/_logs/2026-06-13T14_34_30_339Z-debug-0.log

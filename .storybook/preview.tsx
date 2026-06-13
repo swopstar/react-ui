@@ -64,7 +64,7 @@ export const decorators: Decorator[] = [withTheme]
 
 const preview: Preview = {
   parameters: {
-    backgrounds: { disable: true },
+    backgrounds: { disabled: true },
     controls: {
       matchers: {
         color: /(background|color|fill|stroke)$/i,
