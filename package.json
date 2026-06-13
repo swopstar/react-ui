@@ -3,6 +3,10 @@
   "version": "0.2606.2",
   "description": "Shared React component library for swop* projects",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swopstar/react-ui"
+  },
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
